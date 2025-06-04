@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu - MR.COFFEE</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script defer src="js/main.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">MR.<span>COFFEE</span></div>
+    <button id="hamburger-btn" class="hamburger-btn" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div class="mobile-menu-backdrop"></div>
+    <ul class="nav-list">
+      <li class="nav-item"><a href="index.html">Home</a></li>
+      <li class="nav-item"><a href="menu.html" class="active">Menu</a></li>
+      <li class="nav-item"><a href="rewards.html">Rewards</a></li>
+      <li class="nav-item"><a href="about.html">About Us</a></li>
+      <li class="nav-item"><a href="order.html">Order</a></li>
+      <li class="nav-item">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 2V4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 20V22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M4.93 4.93L6.34 6.34" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M17.66 17.66L19.07 19.07" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M2 12H4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M20 12H22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M6.34 17.66L4.93 19.07" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M19.07 4.93L17.66 6.34" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </li>
+    </ul>
+  </nav>
+
+  <section class="menu-section">
+    <div class="container">
+      <h1 class="section-title">Our Menu</h1>
+      
+      <div class="menu-filters">
+        <button class="menu-filter active" data-type="all">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 5px;">
+            <path d="M3 13H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M3 6H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M3 20H21" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          All
+        </button>
+        <button class="menu-filter" data-type="espresso">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 5px;">
+            <path d="M18 8H19C20.0609 8 21.0783 8.42143 21.8284 9.17157C22.5786 9.92172 23 10.9391 23 12C23 13.0609 22.5786 14.0783 21.8284 14.8284C21.0783 15.5786 20.0609 16 19 16H18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M2 8H18V17C18 18.0609 17.5786 19.0783 16.8284 19.8284C16.0783 20.5786 15.0609 21 14 21H6C4.93913 21 3.92172 20.5786 3.17157 19.8284C2.42143 19.0783 2 18.0609 2 17V8Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M6 1V4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M10 1V4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M14 1V4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Espresso
+        </button>
+        <button class="menu-filter" data-type="frappe">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 5px;">
+            <path d="M8.5 12L5 19H19L15.5 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M6 8H18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M12 5V8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Frappe
+        </button>
+        <button class="menu-filter" data-type="brewed">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 5px;">
+            <path d="M17 8H19C20.0609 8 21.0783 8.42143 21.8284 9.17157C22.5786 9.92172 23 10.9391 23 12C23 13.0609 22.5786 14.0783 21.8284 14.8284C21.0783 15.5786 20.0609 16 19 16H17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9 20H7C5.93913 20 4.92172 19.5786 4.17157 18.8284C3.42143 18.0783 3 17.0609 3 16V8C3 6.93913 3.42143 5.92172 4.17157 5.17157C4.92172 4.42143 5.93913 4 7 4H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M10 4V11L12 9L14 11V4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Brewed
+        </button>
+        <button class="menu-filter" data-type="bread">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 5px;">
+            <path d="M17 12C19.7614 12 22 9.76142 22 7C22 4.23858 19.7614 2 17 2C15.5938 2 14.3352 2.6076 13.5 3.58M7 2C4.23858 2 2 4.23858 2 7C2 9.76142 4.23858 12 7 12C8.63061 12 10.0856 11.2704 11 10.1277M17 12C17 15.866 13.866 19 10 19C6.13401 19 3 15.866 3 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Bread
+        </button>
+      </div>
+      
+      <div class="menu-grid">
+        <div class="menu-item" data-type="espresso">
+          <img src="assets/images/espresso.jpg" alt="Espresso" class="menu-image">
+          <div class="menu-content">
+            <h3 class="menu-title">Espresso</h3>
+            <div class="menu-price">Rp 25.000</div>
+          </div>
+        </div>
+        
+        <div class="menu-item" data-type="frappe">
+          <img src="assets/images/frappe.jpg" alt="Frappe" class="menu-image">
+          <div class="menu-content">
+            <h3 class="menu-title">Frappe</h3>
+            <div class="menu-price">Rp 30.000</div>
+          </div>
+        </div>
+        
+        <div class="menu-item" data-type="brewed">
+          <img src="assets/images/brewed.jpg" alt="Brewed Coffee" class="menu-image">
+          <div class="menu-content">
+            <h3 class="menu-title">Brewed Coffee</h3>
+            <div class="menu-price">Rp 28.000</div>
+          </div>
+        </div>
+        
+        <div class="menu-item" data-type="bread">
+          <img src="assets/images/croissant.jpg" alt="Croissant" class="menu-image">
+          <div class="menu-content">
+            <h3 class="menu-title">Croissant</h3>
+            <div class="menu-price">Rp 18.000</div>
+          </div>
+        </div>
+        
+        <div class="menu-item" data-type="espresso">
+          <img src="assets/images/latte.jpg" alt="Latte" class="menu-image">
+          <div class="menu-content">
+            <h3 class="menu-title">Latte</h3>
+            <div class="menu-price">Rp 27.000</div>
+          </div>
+        </div>
+        
+        <div class="menu-item" data-type="bread">
+          <img src="assets/images/bread.jpg" alt="Bread" class="menu-image">
+          <div class="menu-content">
+            <h3 class="menu-title">Bread</h3>
+            <div class="menu-price">Rp 15.000</div>
+          </div>
+        </div>
+        
+        <div class="menu-item" data-type="frappe">
+          <img src="assets/images/mocha-frappe.jpg" alt="Mocha Frappe" class="menu-image">
+          <div class="menu-content">
+            <h3 class="menu-title">Mocha Frappe</h3>
+            <div class="menu-price">Rp 32.000</div>
+          </div>
+        </div>
+        
+        <div class="menu-item" data-type="brewed">
+          <img src="assets/images/americano.jpg" alt="Americano" class="menu-image">
+          <div class="menu-content">
+            <h3 class="menu-title">Americano</h3>
+            <div class="menu-price">Rp 26.000</div>
+          </div>
+        </div>
+      </div>
+      
+      <a href="order.html" class="btn-order">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 8px;">
+          <path d="M9 22C9.55228 22 10 21.5523 10 21C10 20.4477 9.55228 20 9 20C8.44772 20 8 20.4477 8 21C8 21.5523 8.44772 22 9 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M20 22C20.5523 22 21 21.5523 21 21C21 20.4477 20.5523 20 20 20C19.4477 20 19 20.4477 19 21C19 21.5523 19.4477 22 20 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M1 1H5L7.68 14.39C7.77144 14.8504 8.02191 15.264 8.38755 15.5583C8.75318 15.8526 9.2107 16.009 9.68 16H19.4C19.8693 16.009 20.3268 15.8526 20.6925 15.5583C21.0581 15.264 21.3086 14.8504 21.4 14.39L23 6H6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Order Now
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-container">
+      <div class="footer-info">
+        <div class="footer-logo">MR.<span>COFFEE</span></div>
+        <p>Creating moments of joy with every cup since 2010.</p>
+        <div class="social-icons">
+          <a href="#" class="social-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 2H15C13.6739 2 12.4021 2.52678 11.4645 3.46447C10.5268 4.40215 10 5.67392 10 7V10H7V14H10V22H14V14H17L18 10H14V7C14 6.73478 14.1054 6.48043 14.2929 6.29289C14.4804 6.10536 14.7348 6 15 6H18V2Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a href="#" class="social-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M23 3.00005C22.0424 3.67552 20.9821 4.19216 19.86 4.53005C19.2577 3.83756 18.4573 3.34674 17.567 3.12397C16.6767 2.90121 15.7395 2.95724 14.8821 3.2845C14.0247 3.61176 13.2884 4.19445 12.773 4.95376C12.2575 5.71308 11.9877 6.61238 12 7.53005V8.53005C10.2426 8.57561 8.50127 8.18586 6.93101 7.39549C5.36074 6.60513 4.01032 5.43868 3 4.00005C3 4.00005 -1 13 8 17C5.94053 18.398 3.48716 19.099 1 19C10 24 21 19 21 7.50005C20.9991 7.2215 20.9723 6.94364 20.92 6.67005C21.9406 5.66354 22.6608 4.39276 23 3.00005Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a href="#" class="social-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17 2H7C4.23858 2 2 4.23858 2 7V17C2 19.7614 4.23858 22 7 22H17C19.7614 22 22 19.7614 22 17V7C22 4.23858 19.7614 2 17 2Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M16 11.37C16.1234 12.2022 15.9813 13.0522 15.5938 13.799C15.2063 14.5458 14.5931 15.1514 13.8416 15.5297C13.0901 15.9079 12.2384 16.0396 11.4077 15.9059C10.5771 15.7723 9.80976 15.3801 9.21484 14.7852C8.61991 14.1902 8.22773 13.4229 8.09406 12.5923C7.9604 11.7616 8.09206 10.9099 8.47032 10.1584C8.84858 9.40685 9.45418 8.79374 10.201 8.40624C10.9478 8.01874 11.7978 7.87658 12.63 8C13.4789 8.12588 14.2648 8.52146 14.8717 9.12831C15.4785 9.73515 15.8741 10.5211 16 11.37Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M17.5 6.5H17.51" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="rewards.html">Rewards</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Contact</h4>
+        <ul>
+          <li>Phone: +62 123 4567 890</li>
+          <li>Email: info@mrcoffee.com</li>
+          <li>Address: 123 Coffee Street, Jakarta</li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2024 MR.COFFEE. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
