@@ -27,6 +27,12 @@ document.addEventListener('DOMContentLoaded', function () {
       const isDarkMode = document.body.classList.toggle('dark-mode');
       updateThemeIcon(isDarkMode);
       localStorage.setItem('mrcoffee-theme', isDarkMode ? 'dark' : 'light');
+      
+      // Force DOM repaint by accessing offsetHeight
+      document.body.offsetHeight;
+      
+      // Update all color-dependent elements
+      updateThemeColors(isDarkMode);
     });
   }
   
@@ -51,6 +57,29 @@ document.addEventListener('DOMContentLoaded', function () {
     </svg>`;
     
     themeToggleBtn.innerHTML = isDarkMode ? sunIcon : moonIcon;
+  }
+  
+  function updateThemeColors(isDarkMode) {
+    // Force update on problematic elements that might not respond to the class toggle
+    const elementsToUpdate = document.querySelectorAll('.navbar, .logo, .nav-item a, .card, .about-section, .rewards-card, .menu-item, .order-form');
+    
+    elementsToUpdate.forEach(element => {
+      // Trigger a reflow/repaint on the element
+      element.style.transition = 'none';
+      element.offsetHeight; // Force reflow
+      element.style.transition = '';
+    });
+    
+    // Special handling for elements that might have computed styles
+    const bgElements = document.querySelectorAll('[style*="background"]');
+    bgElements.forEach(element => {
+      // Re-apply background styles based on computed values
+      const computedStyle = window.getComputedStyle(element);
+      if (computedStyle.background) {
+        element.style.background = '';
+        element.offsetHeight;
+      }
+    });
   }
 
   // === Mobile Menu Toggle ===
